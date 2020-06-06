@@ -1,4 +1,5 @@
 # Fetch posts with likes using Facebook Graph API
+![Python CI](https://github.com/kkweon/fb-fetch-posts-graph-api-example/workflows/Python%20CI/badge.svg)
 
 1. Create .env file
 ```shell script
