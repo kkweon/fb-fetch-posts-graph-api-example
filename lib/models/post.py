@@ -28,4 +28,10 @@ class Post(object):
         return m
 
     def __repr__(self) -> str:
-        return f"Message(message={self.message}, likes={self.likes}, updated_time={self.updated_time}, id={self.id})"
+        return f"Message(message={self.__get_message()}, likes={self.likes}, updated_time={self.updated_time}, id={self.id})"
+
+    def __get_message(self) -> str:
+        if len(self.message) < 10:
+            return self.message
+
+        return self.message[:7] + "..."
