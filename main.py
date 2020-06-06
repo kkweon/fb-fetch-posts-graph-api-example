@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import asyncio
 import os
+
 import aiohttp
 
-from fb_client import FacebookClient
+from lib.fb_client import FacebookClient
 
 GROUP_ID = os.environ.get("FB_GROUP_ID")
 ACCESS_TOKEN = os.environ.get("FB_ACCESS_TOKEN")
@@ -17,5 +18,5 @@ async def main():
         print(posts)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())
