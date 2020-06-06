@@ -23,6 +23,11 @@ class Like(object):
         "CARE",
     ]
 
+    def __eq__(self, o: object) -> bool:
+        if not isinstance(o, Like):
+            return False
+        return o.id == self.id and o.name == self.name and o.type == self.type
+
     @classmethod
     def from_json(cls, like_json: dict) -> Like:
         like = Like()

@@ -1,15 +1,15 @@
 # Fetch posts with likes using Facebook Graph API
 
-1. Prepare environment variables
+1. Create .env file
 ```shell script
-export FB_GROUP_ID=292278624537271
-export FB_ACCESS_TOKEN=EAANgaLtKoyWfCAVRYf34pi
+FB_GROUP_ID=292278624537271
+FB_ACCESS_TOKEN=EAANgaLtKoyWfCAVRYf34pi
 ```
 
 2. Run 
 
 ```shell script
-pipenv run python main.py
+make run
 ```
 
 ```shell script
