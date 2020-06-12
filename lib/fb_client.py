@@ -47,8 +47,8 @@ class FacebookClient(object):
                 json_str = await response.json()
                 return Response.from_json(json_str)
 
-            except:
-                logging.critical("GET /:group_id/feed request has failed")
+            except Exception as e:
+                logging.critical("GET /:group_id/feed request has failed. Exception => %s", e)
 
     async def __fetch_like_for_post(
         self, session: aiohttp.ClientSession, post: Post
